@@ -1,0 +1,268 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<style>
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  #nav {
+    list-style-type: none;
+    margin-top:0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #070818;
+  }
+  h2
+  {
+    color: #070818;
+  }
+  
+  .li {
+    float: left;
+  }
+  
+  .li a {
+    display: block;
+    color: #393f4d;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #393f4d;
+    color: #0e2519;
+    font-weight: bold;
+  }
+  .form-style button{
+  
+    width: 89%;
+      height:70%;
+      padding: 5%;
+      background: #070818;
+      border-bottom: 2px solid #393f4d;;
+      border-top-style: none;
+      border-right-style: none;
+      border-left-style: none;
+      color: #393f4d;
+    font-weight: bold;
+    font-size: 28px;
+    font-family: "Times New Roman";
+  }
+  
+  .form-style button:hover {
+    background-color: #393f4d;
+    color: #070818;
+    font-weight: bold;
+  }
+  .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 50;
+    overflow-x: hidden;
+    padding-top: 20px;
+  
+  }
+  
+  .left {
+    left: 15;
+    border-right: 0px #070818 solid;
+  }
+  
+  .right {
+    right: 0;
+    border-left: 1px #070818 solid;
+  }
+  
+  .mytext {
+      border:1px solid #393f4d;
+      border-right:none;
+      padding:4px;
+      margin:0px;
+      float:left;
+      height:32px;
+      overflow:hidden;
+      line-height:16px;
+      width: 300px;
+      margin-left: 54px;
+    }
+  
+    .mic {
+        border:1px solid #393f4d;
+        background:#B0E0E6;
+        vertical-align:top;
+        padding:0px;
+        margin:0;
+        float:left;
+        height:42px;
+        overflow:hidden;
+        width:5em;
+        text-align:center;
+        line-height:16px;
+    }
+    
+  
+  .submit {
+      border:1px solid #393f4d;
+      height: 42px;
+      width: 160px;
+      text-align: center;
+      background-color: #AFEEEE
+      color: #393f4d;
+      font-weight: bold;
+      font-size: 24px;
+      font-family: "Times New Roman";
+      vertical-align:top;
+  }
+  .submit:hover {
+    background-color: #393f4d;
+    color: #070818;
+    font-weight: bold;
+  }
+  .td {
+    color: #070818;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  body
+  {
+    background-color: #F0FFFF
+  }
+  
+  .form-style{
+      font: 95% Arial, Helvetica, sans-serif;
+      max-width: 400px;
+      margin: 10px auto;
+      padding: 16px;
+  
+  }
+  .form-style h1, .form-style a{
+      padding: 20px 0;
+    font-size: 24px;
+      font-weight: bold;
+    font-family: "Times New Roman";
+      text-align: center;
+      margin: -16px -16px 16px -16px;
+    color:#070818
+  }
+  .form-style input[type="text"],
+  .form-style input[type="password"],
+  .form-style input[type="date"],
+  .form-style input[type="datetime"],
+  .form-style input[type="email"],
+  .form-style input[type="number"],
+  .form-style input[type="search"],
+  .form-style input[type="time"],
+  .form-style input[type="url"],
+  .form-style textarea,
+  .form-style select
+  {
+      -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+      transition: all 0.30s ease-in-out;
+      outline: none;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 100%;
+      background: #fff;
+      margin-bottom: 4%;
+      border: 1px solid #ccc;
+      padding: 3%;
+      color:#0000a0 ;
+      font: 95% Arial, Helvetica, sans-serif;
+  }
+  .form-style input[type="text"]:focus,
+  .form-style input[type="password"]:focus,
+  .form-style input[type="date"]:focus,
+  .form-style input[type="datetime"]:focus,
+  .form-style input[type="email"]:focus,
+  .form-style input[type="number"]:focus,
+  .form-style input[type="search"]:focus,
+  .form-style input[type="time"]:focus,
+  .form-style input[type="url"]:focus,
+  .form-style textarea:focus,
+  .form-style select:focus
+  {
+      box-shadow: 0 0 5px #0000a0;
+      padding: 3%;
+      border: 1px solid #0000a0;
+  }
+  
+  .site-form span,label{
+    color: #070818;
+  }
+  .errorlist{
+      color: red;
+      font-weight: bold;
+  }
+</style>
+  <title>Homepage</title>
+</head>
+<!--div style="background-color:#404040;color:#feda6a;padding:10 10 1 10;border: 1px #feda6a groove;margin-bottom:0;">
+
+<h1 align=center>Speech to Sign Language Translator</h1>
+</div> -->
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">SpeechToSL</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'animation' %}">Convertor</a>
+        </li>
+        {% if not user.is_authenticated %}
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+        </li>
+        {% endif %}
+        {% if not user.is_authenticated %}
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">Log-Out</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}">Log-In</a>
+        </li>
+        {% endif %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{% url 'contact' %}">Contact</a>
+            <a class="dropdown-item" href="{% url 'about' %}">About</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="wrapper" >
+  {% block content %}
+  {% endblock %}
+</div>
+
+
+</body>
+</html>
